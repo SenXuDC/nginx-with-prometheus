@@ -1,1 +1,1 @@
-docker build -t xusenme/nginx-with-prometheus:1.16 .
+docker build -t xusenme/nginx-with-prometheus:1.14-ubuntu .
