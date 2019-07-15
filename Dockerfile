@@ -11,7 +11,7 @@ COPY lua-nginx-module-0.10.15.tar.gz /
 COPY LuaJIT-2.0.5.tar.gz /
 COPY ngx_devel_kit-0.3.1rc1.tar.gz /
 COPY prometheus.lua /
-RUN  tar -xzvf /LuaJIT-2.0.5.tar.gz && cd LuaJIT-2.0.5 && make && make install && cd / \
+RUN  tar -xzvf /LuaJIT-2.0.5.tar.gz && cd LuaJIT-2.0.5 && make && make install && ldconfig && cd / \
   && tar -zxvf ngx_devel_kit-0.3.1rc1.tar.gz \
   && tar -zxvf lua-nginx-module-0.10.15.tar.gz \
   && tar -vxzf /nginx-1.14.2.tar.gz \
@@ -55,7 +55,7 @@ RUN  tar -xzvf /LuaJIT-2.0.5.tar.gz && cd LuaJIT-2.0.5 && make && make install &
 # && apk del ${build_pkgs} \
 # && rm -rf /var/cache/apk/*
   && rm -rf /LuaJIT-2.0.5.tar.gz \
-  && rm -rf /nginx-1.14.2 \
+  # && rm -rf /nginx-1.14.2 \
   && rm -rf /nginx-1.14.2.tar.gz \
   && rm -rf /ngx_devel_kit-0.3.1rc1.tar.gz \
   && rm -rf /lua-nginx-module-0.10.15.tar.gz

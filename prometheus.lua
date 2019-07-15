@@ -54,7 +54,6 @@ end
 
 -- Checks that the right number of labels values have been passed.
 --
--- Args:
 --   label_values: an array of label values.
 --
 -- Returns:
